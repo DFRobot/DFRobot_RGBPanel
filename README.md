@@ -45,7 +45,7 @@ void clear();
  * @brief display string
  *
  * @param s String,and the length of string is no more than 40
- * @param col The color of LED
+ * @param color The color of LED
  *             QUENCH  quench LED
  *             RED     red
  *             GREEN   green
@@ -61,7 +61,7 @@ void print(String s,unsigned char color);
  * @brief Display a bitmap
  *
  * @param pic the number of pic,range(0,23)
- * @param col The color of LED
+ * @param color The color of LED
  *             QUENCH  quench LED
  *             RED     red
  *             GREEN   green
@@ -78,7 +78,7 @@ void print(unsigned char pic,unsigned char color);
  *
  * @param x Horizontal coordinate, range(0,15)
  * @param y Vertical coordinate, range(0,7)
- * @param col The color of LED
+ * @param color The color of LED
  *             QUENCH  quench LED
  *             RED     red
  *             GREEN   green
@@ -93,7 +93,7 @@ void pixel(unsigned char x,unsigned char y,unsigned char color);
 /*
  * @brief Fill screen with one color
  *
- * @param col Vertical coordinate, range(0,29)
+ * @param color Vertical coordinate, range(0,29)
  *             QUENCH  quench LED
  *             RED     red
  *             GREEN   green
