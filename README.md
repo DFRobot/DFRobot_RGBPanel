@@ -44,7 +44,7 @@ void clear();
 /*
  * @brief display string
  *
- * @param s String,and the length of string no more than 40
+ * @param s String,and the length of string is no more than 40
  * @param col The color of LED
  *             QUENCH  quench LED
  *             RED     red
