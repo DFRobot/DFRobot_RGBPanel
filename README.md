@@ -1,5 +1,5 @@
 # RGBPanel Library for Arduino
-This is a Library for RGBPanel,the function is control LED display image, string, set pixel and fill screen with a color.
+This is a Library for RGBPanel,the function is control LED display image, string, set pixel and fill screen with one color.
 
 ## Table of Contents
 
