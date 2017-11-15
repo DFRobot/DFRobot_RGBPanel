@@ -33,11 +33,11 @@ void DFRobot_RGBPanel::scroll(unsigned char dir){
     return;
 }
 
-void DFRobot_RGBPanel::print(unsigned char pic,unsigned char color){
+void DFRobot_RGBPanel::print(unsigned char picIndex,unsigned char color){
   
   buf[0] = (buf[0] & (0xe6)) | (0x02 << 3);
   buf[1] = color;
-  buf[4] = pic;
+  buf[4] = picIndex;
   setReg(0x02,buf,SIZE);
   delay(100);
 }

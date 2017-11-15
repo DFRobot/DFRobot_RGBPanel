@@ -38,7 +38,7 @@ class DFRobot_RGBPanel
 public:
   DFRobot_RGBPanel();
   void scroll(unsigned char dir);
-  void print(unsigned char pic,unsigned char color);
+  void print(unsigned char picIndex,unsigned char color);
   void print(String s,unsigned char color);
   void pixel(unsigned char x,unsigned char y,unsigned char color);
   void fillScreen(unsigned char color);

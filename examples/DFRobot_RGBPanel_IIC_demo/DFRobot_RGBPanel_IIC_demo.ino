@@ -25,7 +25,7 @@ void loop(){
   panel.clear();
   panel.scroll(Left);
   panel.print(s,RED);
-  delay(8000);
+  delay(3000);
   
   panel.clear();
   panel.pixel(2,2,QUENCH);
