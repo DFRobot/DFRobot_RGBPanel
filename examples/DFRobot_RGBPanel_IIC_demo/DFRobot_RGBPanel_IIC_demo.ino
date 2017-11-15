@@ -17,7 +17,7 @@ void setup(){
 }
 
 void loop(){
-  String s = "abc";
+  String s = "DFRobot";
   panel.clear();
   panel.print(2,BLUE);
   delay(3000);
@@ -41,5 +41,4 @@ void loop(){
   panel.clear();
   panel.fillScreen(BLUE);
   delay(3000);
-while(1);
 }
