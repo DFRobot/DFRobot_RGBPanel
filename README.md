@@ -14,7 +14,7 @@ This is a Library for RGBPanel,the function is control LED display image, string
 <content>
 
 ## Summary
-This is Library for RGBPanle,You can make it display the image, string, set pixel and fill screen with a color.
+This is Library for RGBPanle,You can make it display the image, string, set pixel and fill screen with one color.
 
 ## Methods
 
@@ -91,7 +91,7 @@ void print(unsigned char pic,unsigned char color);
 void pixel(unsigned char x,unsigned char y,unsigned char color); 
 
 /*
- * @brief Fill screen with a color
+ * @brief Fill screen with one color
  *
  * @param col Vertical coordinate, range(0,29)
  *             QUENCH  quench LED
