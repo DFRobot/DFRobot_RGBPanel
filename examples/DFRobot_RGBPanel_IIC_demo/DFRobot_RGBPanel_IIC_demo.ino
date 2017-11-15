@@ -2,18 +2,17 @@
 DFRobot_RGBPanel panel;
 
 void setup(){
-  Serial.begin(9600);
 }
 
 void loop(){
   String s = "abc";
   panel.clear();
-  panel.print(0x02,BLUE);
+  panel.print(2,BLUE);
   delay(3000);
   
   panel.clear();
   panel.scroll(L);
-  panel.print(s,0x01);
+  panel.print(s,RED);
   delay(3000);
   
   panel.clear();
