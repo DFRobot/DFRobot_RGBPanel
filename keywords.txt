@@ -1,0 +1,47 @@
+#######################################
+# Syntax Coloring Map For Grove - Serial LCD GRB BackLight
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+DFRobot_RGBPanel	KEYWORD1
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+scroll		KEYWORD2
+print		KEYWORD2
+print		KEYWORD2
+pixel		KEYWORD2
+fillScreen	KEYWORD2
+clear		KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+_RGBAddr	LITERAL1
+FUNC	LITERAL1
+COLOR	LITERAL1
+PIX_X	LITERAL1
+PIX_Y	LITERAL1
+BITMAP	LITERAL1
+STR		LITERAL1
+UNCLEAR	LITERAL1
+CLEAR	LITERAL1
+L		LITERAL1
+R		LITERAL1
+N		LITERAL1
+UNSCROLL	LITERAL1
+SCROLL	LITERAL1
+PIX_ENABLE	LITERAL1
+BITMAP_ENABLE	LITERAL1
+STR_ENABLE	LITERAL1
+QUENCH	LITERAL1
+RED	LITERAL1
+GREEN	LITERAL1
+YELLOW	LITERAL1
+BLUE	LITERAL1
+PURPLE	LITERAL1
+CYAN	LITERAL1
+WHITE	LITERAL1
+SIZE	LITERAL1
