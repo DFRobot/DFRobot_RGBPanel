@@ -13,9 +13,9 @@
 
 #define UNCLEAR 0x0
 #define CLEAR 0x1
-#define L (0x0 << 1)
-#define R (0x1 << 1)
-#define N (0x11)
+#define Left (0x0 << 1)
+#define Right (0x1 << 1)
+#define None (0x11)
 #define UNSCROLL (0x0 << 2)
 #define SCROLL (0x1 <<2)
 #define PIX_ENABLE (0x01 << 3)
@@ -38,10 +38,10 @@ class DFRobot_RGBPanel
 public:
   DFRobot_RGBPanel();
   void scroll(unsigned char dir);
-  void print(unsigned char pic,unsigned char col);
-  void print(String s,unsigned char col);
-  void pixel(unsigned char x,unsigned char y,unsigned char col);
-  void fillScreen(unsigned char col);
+  void print(unsigned char pic,unsigned char color);
+  void print(String s,unsigned char color);
+  void pixel(unsigned char x,unsigned char y,unsigned char color);
+  void fillScreen(unsigned char color);
   void clear();
   unsigned char buf[SIZE] = {0};
 private:

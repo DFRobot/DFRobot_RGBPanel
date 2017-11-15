@@ -1,3 +1,15 @@
+ /*!
+  * file DFRobot_RGBPanel_IIC_demo.ino
+  *
+  * connect RGBPanel and Arduino ,then download this example
+  *
+  * Copyright   [DFRobot](http://www.dfrobot.com), 2016
+  * Copyright   GNU Lesser General Public License
+  *
+  * version  V0.1
+  * date  2017-11-15
+  */
+
 #include <DFRobot_RGBPanel.h>
 DFRobot_RGBPanel panel;
 
@@ -11,7 +23,7 @@ void loop(){
   delay(3000);
   
   panel.clear();
-  panel.scroll(L);
+  panel.scroll(Left);
   panel.print(s,RED);
   delay(3000);
   

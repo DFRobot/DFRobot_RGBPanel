@@ -16,17 +16,16 @@ void DFRobot_RGBPanel::clear(){
 }
 
 void DFRobot_RGBPanel::scroll(unsigned char dir){
-  if((dir != N)&&(dir != R)&&(dir != L)){
+  if((dir != None)&&(dir != Right)&&(dir != Left)){
     return;
   }
-  if(dir == N){
+  if(dir == None){
     buf[0] &= (~(0x01<<2));
   }
-  else if(dir == R){
+  else if(dir == Right){
     buf[0] |= (0x01<<2)|(0x01<<1);
   }
-  else if(dir == L){
-    Serial.println("L");
+  else if(dir == Left){
     buf[0] |= (0x01<<2);
     buf[0] &= (~(0x01<<1));
   }
@@ -34,16 +33,16 @@ void DFRobot_RGBPanel::scroll(unsigned char dir){
     return;
 }
 
-void DFRobot_RGBPanel::print(unsigned char pic,unsigned char col){
+void DFRobot_RGBPanel::print(unsigned char pic,unsigned char color){
   
   buf[0] = (buf[0] & (0xe6)) | (0x02 << 3);
-  buf[1] = col;
+  buf[1] = color;
   buf[4] = pic;
   setReg(0x02,buf,SIZE);
   delay(100);
 }
 
-void DFRobot_RGBPanel::print(String s,unsigned char col){
+void DFRobot_RGBPanel::print(String s,unsigned char color){
   unsigned char i = 0;
   int len = s.length();
   
@@ -51,7 +50,7 @@ void DFRobot_RGBPanel::print(String s,unsigned char col){
     return;
   }
   buf[0] = (buf[0] & (0xe6))| (0x03 << 3) ;
-  buf[1] = col;
+  buf[1] = color;
   for(i = 0;i <= len;i++){
     buf[5+i] = s[i];
   }
@@ -59,19 +58,19 @@ void DFRobot_RGBPanel::print(String s,unsigned char col){
   delay(100);
 }
 
-void DFRobot_RGBPanel::pixel(unsigned char x,unsigned char y,unsigned char col){
+void DFRobot_RGBPanel::pixel(unsigned char x,unsigned char y,unsigned char color){
   buf[0] = (buf[0] & (0xe6)) | (0x01 << 3);
-  buf[1] = col;
+  buf[1] = color;
   buf[2] = x;
   buf[3] = y;
   setReg(0x02,buf,SIZE);
   delay(100);
 }
 
-void DFRobot_RGBPanel::fillScreen(unsigned char col){
+void DFRobot_RGBPanel::fillScreen(unsigned char color){
   buf[0] = 0x1;
   buf[0] = buf[0] = (buf[0] & (0xe7)) | (0x01 << 3);
-  buf[1] = col;
+  buf[1] = color;
   buf[2] = 0;
   buf[3] = 0;
   setReg(0x02,buf,SIZE);

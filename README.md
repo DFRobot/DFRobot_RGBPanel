@@ -30,9 +30,9 @@ DFRobot_RGBPanel();
  * @brief Set the direction of scroll
  *
  * @param dir the direction
- *            L: left
- *            R: right
- *            N: stop scroll
+ *            Left: left
+ *            Right: right
+ *            None: stop scroll
  */
 void scroll(unsigned char dir);
 
@@ -55,7 +55,7 @@ void clear();
  *             CYAN    cyan
  *             WHITE   white
  */
-void print(String s,unsigned char col);
+void print(String s,unsigned char color);
 
 /*
  * @brief Display a bitmap
@@ -71,7 +71,7 @@ void print(String s,unsigned char col);
  *             CYAN    cyan
  *             WHITE   white
  */
-void print(unsigned char pic,unsigned char col);
+void print(unsigned char pic,unsigned char color);
 
 /*
  * @brief set pixel
@@ -88,7 +88,7 @@ void print(unsigned char pic,unsigned char col);
  *             CYAN    cyan
  *             WHITE   white
  */
-void pixel(unsigned char x,unsigned char y,unsigned char col); 
+void pixel(unsigned char x,unsigned char y,unsigned char color); 
 
 /*
  * @brief Fill screen with a color
@@ -103,7 +103,7 @@ void pixel(unsigned char x,unsigned char y,unsigned char col);
  *             CYAN    cyan
  *             WHITE   white
  */
-void fillScreen(unsigned char col); 
+void fillScreen(unsigned char color); 
 
 ```
 
@@ -112,7 +112,11 @@ void fillScreen(unsigned char col);
 
 MCU                | Work Well | Work Wrong | Untested  | Remarks
 ------------------ | :----------: | :----------: | :---------: | -----
-Arduino |      √       |             |            | 
+Arduino Leonardo |      √       |             |            | 
+Arduino Uno |      √       |             |            | 
+FireBeetle-Board328P |             |      √       |            | 
+FireBeetle-ESP32 |             |       √      |            | 
+FireBeetle-ESP8266 |             |      √       |            | 
 
 ## History
 
