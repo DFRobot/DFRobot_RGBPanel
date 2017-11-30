@@ -64,7 +64,6 @@ void DFRobot_RGBPanel::pixel(unsigned char x,unsigned char y,unsigned char color
   buf[2] = x;
   buf[3] = y;
   setReg(0x02,buf,SIZE);
-  delay(100);
 }
 
 void DFRobot_RGBPanel::fillScreen(unsigned char color){
