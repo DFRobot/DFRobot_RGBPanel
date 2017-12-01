@@ -64,6 +64,7 @@ void DFRobot_RGBPanel::pixel(unsigned char x,unsigned char y,unsigned char color
   buf[2] = x;
   buf[3] = y;
   setReg(0x02,buf,SIZE);
+ // delay(5);
 }
 
 void DFRobot_RGBPanel::fillScreen(unsigned char color){
@@ -90,14 +91,14 @@ void DFRobot_RGBPanel::setReg(unsigned char Reg ,unsigned char *pdata, unsigned 
    Wire.endTransmission();    // stop transmitting
 }
 
-uint8_t DFRobot_RGBPanel::readReg(uint8_t addr){
+uint8_t DFRobot_RGBPanel::readReg(uint8_t addr,uint8_t num){
   uint8_t result;
 
   Wire.beginTransmission(_RGBAddr); //Start transmission to device 
   Wire.write(addr); //Sends register address to read rom
   Wire.endTransmission(false); //End transmission
   
-  Wire.requestFrom((uint8_t)_RGBAddr, (uint8_t)2);//Send data n-bytes read
+  Wire.requestFrom((uint8_t)_RGBAddr, num);//Send data n-bytes read
   result = Wire.read(); //Receive DATA
   return result;
 }

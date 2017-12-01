@@ -9,14 +9,19 @@
   * version  V0.1
   * date  2017-11-15
   */
-
+#include<Wire.h>
 #include <DFRobot_RGBPanel.h>
 DFRobot_RGBPanel panel;
 
+
+
 void setup(){
+  Serial.begin(9600);
 }
 
 void loop(){
+  int i = panel.readReg(0x00,1);
+  Serial.println(i,HEX);
   String s = "DFRobot";
   panel.clear();
   panel.print(2,BLUE);
