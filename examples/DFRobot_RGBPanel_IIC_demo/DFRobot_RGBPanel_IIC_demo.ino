@@ -20,8 +20,12 @@ void setup(){
 }
 
 void loop(){
-  int i = panel.readReg(0x00,1);
-  Serial.println(i,HEX);
+  int *p = panel.readReg(0x00,2);
+  int i = 0;
+  for(i = 0;i<2;i++){
+    Serial.println(p[i],HEX);
+  }
+
   String s = "DFRobot";
   panel.clear();
   panel.print(2,BLUE);

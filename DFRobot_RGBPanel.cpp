@@ -91,14 +91,18 @@ void DFRobot_RGBPanel::setReg(unsigned char Reg ,unsigned char *pdata, unsigned 
    Wire.endTransmission();    // stop transmitting
 }
 
-uint8_t DFRobot_RGBPanel::readReg(uint8_t addr,uint8_t num){
-  uint8_t result;
-
+int * DFRobot_RGBPanel::readReg(uint8_t addr,uint8_t num){
+  static int result[64];
+  int i = 0;
   Wire.beginTransmission(_RGBAddr); //Start transmission to device 
   Wire.write(addr); //Sends register address to read rom
   Wire.endTransmission(false); //End transmission
   
   Wire.requestFrom((uint8_t)_RGBAddr, num);//Send data n-bytes read
-  result = Wire.read(); //Receive DATA
+   while (Wire.available())   // slave may send less than requested
+  {
+    result[i++] = Wire.read(); // print the character
+  }
+//  Serial.println(result[0]);
   return result;
 }

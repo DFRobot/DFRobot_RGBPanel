@@ -44,7 +44,7 @@ public:
   void fillScreen(unsigned char color);
   void clear();
   unsigned char buf[SIZE] = {0};
-  uint8_t readReg(uint8_t addr,uint8_t num);
+  int * readReg(uint8_t addr,uint8_t num);
 private:
   void setReg(unsigned char Reg ,unsigned char *pdata, unsigned char datalen );
 //  uint8_t readReg(uint8_t addr,uint8_t num);
