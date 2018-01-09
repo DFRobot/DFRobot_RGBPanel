@@ -13,8 +13,6 @@
 #include <DFRobot_RGBPanel.h>
 DFRobot_RGBPanel panel;
 
-
-
 void setup(){
   Serial.begin(9600);
 }
@@ -25,10 +23,10 @@ void loop(){
   for(i = 0;i<2;i++){
     Serial.println(p[i],HEX);
   }
-
+  int a=12;
   String s = "DFRobot";
   panel.clear();
-  panel.print(2,BLUE);
+  panel.display(2,BLUE);
   delay(3000);
   
   panel.clear();
@@ -49,5 +47,10 @@ void loop(){
   
   panel.clear();
   panel.fillScreen(BLUE);
+  delay(3000);
+  
+  panel.clear();
+  panel.scroll(Left);
+  panel.print(a, BLUE);
   delay(3000);
 }

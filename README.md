@@ -105,14 +105,6 @@ void pixel(unsigned char x,unsigned char y,unsigned char color);
  */
 void fillScreen(unsigned char color); 
 
-/*
- * @brief Fill screen with one color
- *
- * @param addr Read address
- * @param num Read size
- */
-uint8_t readReg(uint8_t addr,uint8_t num);
-
 ```
 
 

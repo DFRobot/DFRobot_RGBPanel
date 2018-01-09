@@ -38,13 +38,14 @@ class DFRobot_RGBPanel
 public:
   DFRobot_RGBPanel();
   void scroll(unsigned char dir);
-  void print(unsigned char picIndex,unsigned char color);
+  void display(unsigned char picIndex,unsigned char color);
   void print(String s,unsigned char color);
   void pixel(unsigned char x,unsigned char y,unsigned char color);
   void fillScreen(unsigned char color);
   void clear();
   unsigned char buf[SIZE] = {0};
   int * readReg(uint8_t addr,uint8_t num);
+  void print(int val,unsigned char color);
 private:
   void setReg(unsigned char Reg ,unsigned char *pdata, unsigned char datalen );
 //  uint8_t readReg(uint8_t addr,uint8_t num);
