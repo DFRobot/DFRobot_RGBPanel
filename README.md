@@ -58,6 +58,22 @@ void clear();
 void print(String s,unsigned char color);
 
 /*
+ * @brief display value
+ *
+ * @param val value
+ * @param col The color of LED
+ *             QUENCH  quench LED
+ *             RED     red
+ *             GREEN   green
+ *             YELLOW  yellow
+ *             BLUE    blue
+ *             PURPLE  purple
+ *             CYAN    cyan
+ *             WHITE   white
+ */
+void print(int val,unsigned char color);
+
+/*
  * @brief Display a bitmap
  *
  * @param picIndex the number of picture,range(0,23)
@@ -71,7 +87,7 @@ void print(String s,unsigned char color);
  *             CYAN    cyan
  *             WHITE   white
  */
-void print(unsigned char picIndex,unsigned char color);
+void display(unsigned char picIndex,unsigned char color);
 
 /*
  * @brief set pixel
