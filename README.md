@@ -137,7 +137,7 @@ FireBeetle-ESP8266 |             |      √       |            |
 ## History
 
 - data 2017-11-15
-- version V0.1
+- version V1.0
 
 
 ## Credits
